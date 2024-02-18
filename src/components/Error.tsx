@@ -1,9 +1,9 @@
-import { Alert, Container } from '@mui/material';
+import { Alert } from '@mui/material';
 
 export const Error = () => {
   return (
-    <Container>
-      <Alert severity="error">Failed to load products</Alert>
-    </Container>
+    <Alert severity="error" sx={{ mt: 3 }}>
+      Failed to load products
+    </Alert>
   );
 };

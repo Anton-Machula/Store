@@ -1,5 +1,10 @@
+import { Container } from '@mui/material';
 import { Products } from './components';
 
 export const App = () => {
-  return <Products />;
+  return (
+    <Container>
+      <Products />
+    </Container>
+  );
 };
