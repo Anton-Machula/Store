@@ -1,14 +1,21 @@
 import useSWR from 'swr';
+import { Box } from '@mui/material';
 import { API_Link, fetcher } from '../utils';
 import { ProductCard } from './ProductCard/ProductCard';
 import { Product } from '../types';
-import { Box, CircularProgress } from '@mui/material';
+import { Loading } from './Loading';
+import { Error } from './Error';
 
 export const Products = () => {
   const { data: products, isLoading, error } = useSWR(API_Link, fetcher);
 
-  if (error) return <div>failed to load</div>;
-  if (isLoading) return <CircularProgress />;
+  if (error) {
+    return <Error />;
+  }
+
+  if (isLoading) {
+    return <Loading />;
+  }
 
   return (
     <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 2 }}>
