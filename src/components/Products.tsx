@@ -1,6 +1,6 @@
 import useSWR from 'swr';
 import { API_Link, fetcher } from '../utils';
-import { ProductCard } from './ProductCard';
+import { ProductCard } from './ProductCard/ProductCard';
 import { Product } from '../types';
 import { Box, CircularProgress } from '@mui/material';
 
