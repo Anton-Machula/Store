@@ -9,12 +9,12 @@ export const styles = {
       xs: 'column',
       sm: 'row',
     },
-    maxWidth: '700px',
   },
   cardMedia: {
     component: 'img',
-    maxWidth: '300px',
+    maxWidth: '100px',
     borderRadius: 0.5,
+    objectFit: 'contain',
   },
   cardContent: {
     display: 'flex',

@@ -24,13 +24,13 @@ export const ProductCard: FC<ProductCardProps> = ({ product }) => {
   return (
     <Card sx={styles.card}>
       <CardMedia
-        component="img"
+        component="img"       
         alt={title}
         image={image}
         sx={styles.cardMedia}
       />
       <CardContent sx={styles.cardContent}>
-        <Typography variant="h5">{title}</Typography>
+        <Typography variant="h6">{title}</Typography>
         <Accordion>
           <AccordionSummary
             expandIcon={<ExpandMoreIcon />}
