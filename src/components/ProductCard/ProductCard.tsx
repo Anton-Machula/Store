@@ -6,7 +6,11 @@ import {
   CardMedia,
   Rating,
   Chip,
+  Accordion,
+  AccordionSummary,
+  AccordionDetails,
 } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 import { Product } from '../../types';
 import { styles } from './ProductCard.styles';
 
@@ -27,9 +31,16 @@ export const ProductCard: FC<ProductCardProps> = ({ product }) => {
       />
       <CardContent sx={styles.cardContent}>
         <Typography variant="h5">{title}</Typography>
-        <Typography variant="body2" color="text.secondary">
-          {description}
-        </Typography>
+        <Accordion>
+          <AccordionSummary
+            expandIcon={<ExpandMoreIcon />}
+            aria-controls="panel1-content"
+            id="panel1-header"
+          >
+            Product description
+          </AccordionSummary>
+          <AccordionDetails>{description}</AccordionDetails>
+        </Accordion>
         <Typography
           sx={styles.priceCategoryRating}
           variant="body2"
