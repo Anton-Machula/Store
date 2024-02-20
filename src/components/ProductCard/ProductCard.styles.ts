@@ -15,6 +15,9 @@ export const styles = {
     maxWidth: '100px',
     borderRadius: 0.5,
     objectFit: 'contain',
+    display: 'block',
+    ml: 'auto',
+    mr: 'auto',
   },
   cardContent: {
     display: 'flex',
