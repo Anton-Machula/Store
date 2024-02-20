@@ -22,8 +22,8 @@ export const Products = () => {
   return (
     <Grid container spacing={1} sx={{ p: 1 }}>
       <Grid container item spacing={3}>
-        {products.map((product: Product) => (
-          <Grid item xs={size}>
+        {products.map((product: Product, index: number) => (
+          <Grid item xs={size} key={index}>
             <ProductCard product={product} />
           </Grid>
         ))}
